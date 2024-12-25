@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love for Sakshi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .title {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: slideIn 1s forwards;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4c3b;
+        }
+
+        #surprise {
+            margin-top: 20px;
+            font-size: 2em;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">To My Dearest Sakshi</h1>
+        <p class="message">You are the light of my life and the love of my heart.</p>
+        <button id="loveButton">Click Here</button>
+        <div id="surprise" class="hidden">❤️ I Love You, Sakshi! ❤️</div>
+    </div>
+    <script>
+        document.getElementById('loveButton').addEventListener('click', function() {
+            const surprise = document.getElementById('surprise');
+            surprise.classList.remove('hidden');
+            surprise.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
